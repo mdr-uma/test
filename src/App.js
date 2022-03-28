@@ -7,6 +7,19 @@ class App extends Component {
         password:""
     }
 
+    handleSubmit = event => {
+        event.preventDefault()
+        fetch('http://localhost:3000/', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(this.state)
+        })
+
+    }
+
+
     render() {
         return (
         <div>
