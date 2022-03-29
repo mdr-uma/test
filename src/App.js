@@ -19,7 +19,6 @@ class App extends Component {
 
     }
 
-
     render() {
         return (
         <div>
@@ -28,6 +27,10 @@ class App extends Component {
                 <input type="text" id="password" value={this.state.password} onChange={this.handleChange} />
                 <input type="submit" value="Submit"/>
             </form>
+
+            {this.state.username}
+            {this.state.password}
+            
         </div>
         )
     }
