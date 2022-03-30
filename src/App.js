@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from './components/Button'
 
 class App extends Component {
 
@@ -31,8 +32,15 @@ class App extends Component {
             {this.state.username}
             {this.state.password}
             
+            <Button onClick={this.handleClick} />
         </div>
         )
+    }
+
+    handleChange = event => {
+        this.setState({
+            [event.target.id]: event.target.value
+        })
     }
 }
 
